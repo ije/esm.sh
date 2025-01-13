@@ -1,6 +1,6 @@
 # Changelog
 
-## v136(Unreleased)
+## v136
 
 * Add two builtin registries:
   * [jsr](https://jsr.io) - The open-source package registry for modern JavaScript and TypeScript, created by the Deno team. ([32cd2bd](https://github.com/esm-dev/esm.sh/commit/32cd2bd931f33118cbc96ee89583f20718c58fbf))
@@ -115,12 +115,13 @@
   * Use target `es2022` for browsers by default ([#903](https://github.com/esm-dev/esm.sh/pull/903))
   * Replace `window` with `globalThis` to make Deno 2 happy ([#964](https://github.com/esm-dev/esm.sh/pull/964))
   * Use `.mjs` extenstion for sub-module build ([#917](https://github.com/esm-dev/esm.sh/pull/917))
-  * dts-transformer: support `.d` extension
+  * dts-transformer: support `.d` and `d.cts` extension ([#987](https://github.com/esm-dev/esm.sh/pull/987))
+  * Support `major.minor.patch+build` versioning ([#985](https://github.com/esm-dev/esm.sh/pull/985))
+  * Support import attributes ([#976](https://github.com/esm-dev/esm.sh/pull/976))
+  * config: Support **S3-compatible** storage ([#886](https://github.com/esm-dev/esm.sh/pull/886))
   * config: Add `corsAllowOrigins` config
   * config: Add `customLandingPage` config ([#928](https://github.com/esm-dev/esm.sh/pull/928))
   * config: Add `npmQueryCacheTTL` config ([#921](https://github.com/esm-dev/esm.sh/pull/921))
-  * config: Add npmQueryCacheTTL config ([#921](https://github.com/esm-dev/esm.sh/pull/921))
-  * config: Support **S3-compatible** storage ([#886](https://github.com/esm-dev/esm.sh/pull/886))
 
 ## v135
 
@@ -1053,6 +1054,6 @@ For Deno:
 - Fix `__setImmediate$` is not defined
 - Support exports define in package.json
 - Support mjs extension
-- Improve NpmPackage resolve (**fix** [#41](https://github.com/esm-dev/esm.sh/issues/41))
+- Improve NpmPackage resolve (close [#41](https://github.com/esm-dev/esm.sh/issues/41))
 - Upgrade esbuild to **0.11.4**
 - Upgrade rex to **1.3.0**
